@@ -174,6 +174,9 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-u-01" {
       "sudo /tmp/dns-ansible.sh",
     ]
   }
+  provisioner "local-exec" {
+    command = "ansible-playbook ansible/playbook.yml -u ubuntu -i ${vsphere_virtual_machine.ubuntu_vm_vesxi-u-01[count.index].default_ip_address}, -e 'http_host=${vsphere_virtual_machine.ubuntu_vm_vesxi-u-01[count.index].name}'"
+  }
 }
 
 output "IPs-ubuntu-u-01" {
@@ -261,6 +264,10 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-u-02" {
       "sudo /tmp/dns-ansible.sh",
     ]
   }
+  provisioner "local-exec" {
+    command = "ansible-playbook ansible/playbook.yml -u ubuntu -i ${vsphere_virtual_machine.ubuntu_vm_vesxi-u-02[count.index].default_ip_address}, -e 'http_host=${vsphere_virtual_machine.ubuntu_vm_vesxi-u-02[count.index].name}'"
+  }
+
 }
 
 output "IPs-ubuntu-u-02" {
@@ -346,6 +353,9 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-r-03" {
       # "/tmp/dns-ansible.sh args",
       "sudo /tmp/dns-ansible.sh",
     ]
+  }
+  provisioner "local-exec" {
+    command = "ansible-playbook ansible/playbook.yml -u ubuntu -i ${vsphere_virtual_machine.ubuntu_vm_vesxi-r-03[count.index].default_ip_address}, -e 'http_host=${vsphere_virtual_machine.ubuntu_vm_vesxi-r-03[count.index].name}'"
   }
 }
 

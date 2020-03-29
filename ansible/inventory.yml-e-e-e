@@ -1,0 +1,8 @@
+all:
+  hosts:
+    u-01:
+      ansible_host: 172.10.0.10
+    u-02:
+      ansible_host: 172.11.0.10
+    r-03:
+      ansible_host: 172.12.0.10
