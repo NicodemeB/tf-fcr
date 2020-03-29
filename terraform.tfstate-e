@@ -1,17 +1,87 @@
 {
   "version": 4,
   "terraform_version": "0.12.21",
-  "serial": 476,
+  "serial": 512,
   "lineage": "27e9843b-ebe4-af30-3b6e-ed3ceb2a1f30",
   "outputs": {
-    "IPs-ubuntu-u-01": {
+    "IPs-ubuntu-r-03": {
       "value": [
-        "172.10.0.10"
+        [
+          "r-03-ubuntu01"
+        ],
+        [
+          "172.12.0.10"
+        ]
       ],
       "type": [
         "tuple",
         [
-          "string"
+          [
+            "tuple",
+            [
+              "string"
+            ]
+          ],
+          [
+            "tuple",
+            [
+              "string"
+            ]
+          ]
+        ]
+      ]
+    },
+    "IPs-ubuntu-u-01": {
+      "value": [
+        [
+          "u-01-ubuntu01"
+        ],
+        [
+          "172.10.0.10"
+        ]
+      ],
+      "type": [
+        "tuple",
+        [
+          [
+            "tuple",
+            [
+              "string"
+            ]
+          ],
+          [
+            "tuple",
+            [
+              "string"
+            ]
+          ]
+        ]
+      ]
+    },
+    "IPs-ubuntu-u-02": {
+      "value": [
+        [
+          "u-02-ubuntu01"
+        ],
+        [
+          "172.11.0.10"
+        ]
+      ],
+      "type": [
+        "tuple",
+        [
+          [
+            "tuple",
+            [
+              "string"
+            ]
+          ],
+          [
+            "tuple",
+            [
+              "string"
+            ]
+          ]
         ]
       ]
     }

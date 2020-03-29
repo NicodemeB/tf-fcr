@@ -24,8 +24,8 @@ variable "ubuntu_network_params_vesxi-u-01" {
     domain        = "test.local"
     label         = "ubuntu_network_vesxi-u-01"
     vlan_id       = "0"
-    base_address  = "172.10.0."
-    prefix_length = "24"
+    subnet        = "172.10.0.0/24"
+    # prefix_length = "24"
     gateway       = "172.10.0.254"
     dns           = ["8.8.8.8", "8.8.4.4"]
   }

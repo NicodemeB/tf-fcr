@@ -84,15 +84,22 @@ variable "port_groups" {
   }
 }
 
-variable "ubuntu_vms" {
-  type = map
 
-  default = [
-    {
-      name = "ubuntu-u-01"
-      ip = "172.10.0.10"
-      host = "vesxi-u-01.rack"
-    }
-  ]
-
-}
+# variable "ubuntu_vms" {
+#   default = [
+#     {
+#       name = "ubuntu-u-01-loop"
+#       num_cpus         = 1
+#       memory           = 2048
+#       ip = "172.10.0.100"
+#       host = "vesxi-u-01.rack"
+#     },
+#     {
+#       name = "ubuntu-u-02-loop"
+#       num_cpus         = 1
+#       memory           = 2048
+#       ip = "172.10.0.101"
+#       host = "vesxi-u-01.rack"
+#     }
+#   ]
+# }
