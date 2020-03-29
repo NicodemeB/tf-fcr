@@ -45,33 +45,21 @@ data "vsphere_resource_pool" "vesxi-r-03" {
 data "vsphere_datastore" "ubuntu-vesxi-u-01" {
   name          = var.ubuntu_vm_params_vesxi-u-01["disk_datastore"]
   datacenter_id = data.vsphere_datacenter.dc.id
+  depends_on    = [vsphere_host_port_group.ubuntu_port-vesxi-u-01]
 }
 
 data "vsphere_datastore" "ubuntu-vesxi-u-02" {
   name          = var.ubuntu_vm_params_vesxi-u-02["disk_datastore"]
   datacenter_id = data.vsphere_datacenter.dc.id
+  depends_on    = [vsphere_host_port_group.ubuntu_port-vesxi-u-02]
 }
 
 data "vsphere_datastore" "ubuntu-vesxi-r-03" {
   name          = var.ubuntu_vm_params_vesxi-r-03["disk_datastore"]
   datacenter_id = data.vsphere_datacenter.dc.id
+  depends_on    = [vsphere_host_port_group.ubuntu_port-vesxi-r-03]
 }
 
-# DataStore pfSense config retrieve
-data "vsphere_datastore" "pfSense-vesxi-u-01" {
-  name          = var.pfSense_vm_params_vesxi-u-01["disk_datastore"]
-  datacenter_id = data.vsphere_datacenter.dc.id
-}
-
-data "vsphere_datastore" "pfSense-vesxi-u-02" {
-  name          = var.pfSense_vm_params_vesxi-u-02["disk_datastore"]
-  datacenter_id = data.vsphere_datacenter.dc.id
-}
-
-data "vsphere_datastore" "pfSense-vesxi-r-03" {
-  name          = var.pfSense_vm_params_vesxi-r-03["disk_datastore"]
-  datacenter_id = data.vsphere_datacenter.dc.id
-}
 
 # # Retrieve datastore information on vsphere
 # data "vsphere_datastore" "datastore_db" {
@@ -121,37 +109,37 @@ data "vsphere_network" "ubuntu-vesxi-r-03" {
 data "vsphere_network" "pfSense-vesxi-u-01-out" {
   name          = join("", [var.pfSense_network_params_vesxi-u-01["label"], "-out"])
   datacenter_id = data.vsphere_datacenter.dc.id
-  depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-u-01-out]
+  # depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-u-01-out]
 }
 
 data "vsphere_network" "pfSense-vesxi-u-01-in" {
   name          = join("", [var.pfSense_network_params_vesxi-u-01["label"], "-in"])
   datacenter_id = data.vsphere_datacenter.dc.id
-  depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-u-01-in]
+  # depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-u-01-in]
 }
 
 data "vsphere_network" "pfSense-vesxi-u-02-out" {
   name          = join("", [var.pfSense_network_params_vesxi-u-02["label"], "-out"])
   datacenter_id = data.vsphere_datacenter.dc.id
-  depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-u-02-out]
+  # depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-u-02-out]
 }
 
 data "vsphere_network" "pfSense-vesxi-u-02-in" {
   name          = join("", [var.pfSense_network_params_vesxi-u-02["label"], "-in"])
   datacenter_id = data.vsphere_datacenter.dc.id
-  depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-u-02-in]
+  # depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-u-02-in]
 }
 
 data "vsphere_network" "pfSense-vesxi-r-03-out" {
   name          = join("", [var.pfSense_network_params_vesxi-r-03["label"], "-out"])
   datacenter_id = data.vsphere_datacenter.dc.id
-  depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-r-03-in]
+  # depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-r-03-in]
 }
 
 data "vsphere_network" "pfSense-vesxi-r-03-in" {
   name          = join("", [var.pfSense_network_params_vesxi-r-03["label"], "-in"])
   datacenter_id = data.vsphere_datacenter.dc.id
-  depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-r-03-out]
+  # depends_on    = [vsphere_host_port_group.pfSense_port-vesxi-r-03-out]
 }
 
 
@@ -170,17 +158,3 @@ data "vsphere_virtual_machine" "template_ubuntu_18_04" {
 #   datacenter_id = data.vsphere_datacenter.dc.id
 # }
 
-data "vsphere_virtual_machine" "template_pfSense-u-01" {
-  name          = var.template_image_pfSense-u-01
-  datacenter_id = data.vsphere_datacenter.dc.id
-}
-
-data "vsphere_virtual_machine" "template_pfSense-u-02" {
-  name          = var.template_image_pfSense-u-02
-  datacenter_id = data.vsphere_datacenter.dc.id
-}
-
-data "vsphere_virtual_machine" "template_pfSense-r-03" {
-  name          = var.template_image_pfSense-r-03
-  datacenter_id = data.vsphere_datacenter.dc.id
-}

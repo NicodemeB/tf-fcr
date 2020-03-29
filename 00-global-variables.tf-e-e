@@ -19,9 +19,6 @@ variable "template_image_ubuntu_18_04" {
   default = "Packer-Ubuntu-18.04-TEMPLATE-FCR"
 }
 
-variable "template_image_pfSense" {
-  default = "Packer-pfSense-TEMPLATE-FCR"
-}
 
 #### DC AND CLUSTER
 # # Set vpshere datacenter
