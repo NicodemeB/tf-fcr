@@ -60,17 +60,30 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-u-01" {
   # depends_on = [vsphere_host_port_group.ubuntu_port]
   depends_on = [vsphere_host_port_group.ubuntu_port-vesxi-u-01]
   # depends_on    = [vsphere_distributed_port_group.ubuntu_port_pg_ds]
-  # provisioner "remote-exec" {
-  #   connection {
-  #     type     = "ssh"
-  #     user     = "ubuntu"
-  #     password = "ubuntu"
-  #     host     = "${var.ubuntu_network_params_vesxi-u-01["base_address"]}${count.index + 10}"
-  #   }
-  #   inline = [
-  #     "sudo bash -c 'echo `nameserver 8.8.8.8` >> /etc/resolv.conf '"
-  #   ]
-  # }
+  provisioner "file" {
+    connection {
+      type     = "ssh"
+      user     = "ubuntu"
+      password = "ubuntu"
+      host     = "${var.ubuntu_network_params_vesxi-u-01["base_address"]}${count.index + 10}"
+    }
+    source      = "scripts/dns-ansible.sh"
+    destination = "/tmp/dns-ansible.sh"
+  }
+
+  provisioner "remote-exec" {
+    connection {
+      type     = "ssh"
+      user     = "ubuntu"
+      password = "ubuntu"
+      host     = "${var.ubuntu_network_params_vesxi-u-01["base_address"]}${count.index + 10}"
+    }
+    inline = [
+      "chmod +x /tmp/dns-ansible.sh",
+      # "/tmp/dns-ansible.sh args",
+      "sudo /tmp/dns-ansible.sh",
+    ]
+  }
 }
 
 resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-u-02" {

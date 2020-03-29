@@ -107,9 +107,9 @@ resource "vsphere_host_port_group" "ubuntu_port-vesxi-u-01" {
   virtual_switch_name = var.vswitches.vesxi-u-01-vs-1
   vlan_id             = var.ubuntu_network_params_vesxi-u-01["vlan_id"]
   allow_promiscuous   = true
-  # provisioner "local-exec" {
-  #   command = "sleep 10"
-  # }
+  provisioner "local-exec" {
+    command = "sleep 10"
+  }
   # depends_on    = [vsphere_host_virtual_switch.pfSense_vs_esxi-u-01]
 }
 
@@ -121,9 +121,9 @@ resource "vsphere_host_port_group" "ubuntu_port-vesxi-u-02" {
   virtual_switch_name = var.vswitches.vesxi-u-02-vs-1
   vlan_id             = var.ubuntu_network_params_vesxi-u-02["vlan_id"]
   allow_promiscuous   = true
-  # provisioner "local-exec" {
-  #   command = "sleep 10"
-  # }
+  provisioner "local-exec" {
+    command = "sleep 10"
+  }
   # depends_on    = [vsphere_host_virtual_switch.pfSense_vs_esxi-u-02]
 }
 
@@ -133,9 +133,9 @@ resource "vsphere_host_port_group" "ubuntu_port-vesxi-r-03" {
   virtual_switch_name = var.vswitches.vesxi-r-03-vs-1
   vlan_id             = var.ubuntu_network_params_vesxi-r-03["vlan_id"]
   allow_promiscuous   = true
-  # provisioner "local-exec" {
-  #   command = "sleep 10"
-  # }
+  provisioner "local-exec" {
+    command = "sleep 10"
+  }
   # depends_on    = [vsphere_host_virtual_switch.pfSense_vs_esxi-r-03]
 }
 

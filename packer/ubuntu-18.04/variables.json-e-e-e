@@ -1,15 +1,15 @@
 {
     "vcenter_server": "vcenterserver.rack",
-    "vsphere-datacenter": "Homelab",
+    "vsphere-datacenter": "FCR",
     "username": "packer@vsphere.rack",
     "password": "n7acD7EzSDfYZxdP#",
-    "datastore": "G7-INIT-DS1",
-    "folder": "MT",
-    "host": "esxi-init.rack",
-    "cluster": "esxi-init.rack",
-    "network": "DPort-VLAN-20",
+    "datastore": "vESXI-U-01-DS1",
+    "host": "vesxi-u-01.rack",
+    "cluster": "vesxi-u-01.rack",
+    "network": "VM Network - vesxi-u-01",
+    "network-second": "VM Network - vesxi-u-01",
     "ssh_username": "ubuntu",
     "ssh_password": "ubuntu",
-    "iso_url": "[G7-INIT-DS1] ISO/ubuntu-18.04.4-server-amd64.iso",
-    "template_name": "Packer-Ubuntu-18.04-TEMPLATE"
+    "iso_url": "[vESXI-U-01-DS1] ISO/ubuntu-18.04.4-server-amd64.iso",
+    "template_name": "Packer-Ubuntu-18.04-TEMPLATE-FCR"
 }

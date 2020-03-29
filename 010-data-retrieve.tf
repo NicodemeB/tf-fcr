@@ -45,19 +45,16 @@ data "vsphere_resource_pool" "vesxi-r-03" {
 data "vsphere_datastore" "ubuntu-vesxi-u-01" {
   name          = var.ubuntu_vm_params_vesxi-u-01["disk_datastore"]
   datacenter_id = data.vsphere_datacenter.dc.id
-  depends_on    = [vsphere_host_port_group.ubuntu_port-vesxi-u-01]
 }
 
 data "vsphere_datastore" "ubuntu-vesxi-u-02" {
   name          = var.ubuntu_vm_params_vesxi-u-02["disk_datastore"]
   datacenter_id = data.vsphere_datacenter.dc.id
-  depends_on    = [vsphere_host_port_group.ubuntu_port-vesxi-u-02]
 }
 
 data "vsphere_datastore" "ubuntu-vesxi-r-03" {
   name          = var.ubuntu_vm_params_vesxi-r-03["disk_datastore"]
   datacenter_id = data.vsphere_datacenter.dc.id
-  depends_on    = [vsphere_host_port_group.ubuntu_port-vesxi-r-03]
 }
 
 
@@ -85,7 +82,7 @@ data "vsphere_network" "vesxi-r-03-pg-0" {
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
-
+## -> Move to 020-network.tf due to issue: timming dependecy; should be ok but is not
 # vSwitches config retrieve
 data "vsphere_network" "ubuntu-vesxi-u-01" {
   name          = var.ubuntu_network_params_vesxi-u-01["label"]

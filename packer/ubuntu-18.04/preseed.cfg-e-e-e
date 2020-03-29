@@ -16,11 +16,12 @@ d-i passwd/root-password password ubuntu
 d-i passwd/root-password-again password ubuntu
 
 
-d-i pkgsel/include string open-vm-tools openssh-server cloud-init perl
+d-i pkgsel/include string open-vm-tools openssh-server cloud-init perl git ansible
 
 d-i grub-installer/only_debian boolean true
 
 d-i preseed/late_command string \
+    echo "@reboot root ping 8.8.8.8" >> /target//etc/crontab; \
     echo 'ubuntu ALL=(ALL) NOPASSWD: ALL' > /target/etc/sudoers.d/ubuntu ; \
     in-target chmod 440 /etc/sudoers.d/ubuntu ;
 
