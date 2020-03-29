@@ -83,3 +83,16 @@ variable "port_groups" {
     vesxi-r-03-pg-0 = "VM Network - vesxi-r-03"
   }
 }
+
+variable "ubuntu_vms" {
+  type = map
+
+  default = [
+    {
+      name = "ubuntu-u-01"
+      ip = "172.10.0.10"
+      host = "vesxi-u-01.rack"
+    }
+  ]
+
+}
