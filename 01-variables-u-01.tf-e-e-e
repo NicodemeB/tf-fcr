@@ -1,0 +1,73 @@
+
+variable "template_image_pfSense-u-01" {
+  default = "Packer-pfSense-u-01-TEMPLATE-FCR"
+}
+
+# variable "pfSense_credentials_vesxi-u-01" {
+#   default = {
+#     # user          = "terraform"
+#     user          = "admin"
+#     password      = "Puissance4"
+#   }
+# }
+
+variable "ubuntu_vm_params_vesxi-u-01" {
+  default = {
+    vcpu = "1"
+    ram  = "2048"
+    # You can't set a datastore name with interspace
+    disk_datastore = "vESXI-U-01-DS1"
+    disk_size      = "25"
+  }
+}
+
+variable "pfSense_vm_params_vesxi-u-01" {
+  default = {
+    vcpu = "1"
+    ram  = "2048"
+    # You can't set a datastore name with interspace
+    disk_datastore = "vESXI-U-01-DS1"
+    disk_size      = "25"
+  }
+}
+
+variable "ubuntu_network_params_vesxi-u-01" {
+  default = {
+    domain        = "test.local"
+    label         = "ubuntu_network_vesxi-u-01"
+    vlan_id       = "0"
+    base_address  = "172.10.0."
+    prefix_length = "24"
+    gateway       = "172.10.0.254"
+    dns           = ["8.8.8.8", "8.8.4.4"]
+  }
+}
+
+variable "pfSense_network_params_vesxi-u-01" {
+  default = {
+    domain        = "test.local"
+    label         = "pfSense_network_vesxi-u-01"
+    vlan_id       = "0"
+    # base_address  = "172.16.27."
+    # prefix_length = "20"
+    # gateway       = "172.16.31.254"
+  }
+}
+
+variable "ubuntu_base_hostname_vesxi-u-01" {
+  default = "u-01-ubuntu0"
+}
+
+variable "pfSense_base_hostname_vesxi-u-01" {
+  default = "u-01-pfs"
+}
+
+variable "ubuntu_vm_desired_capacity_vesxi-u-01" {
+  default = "3"
+}
+
+variable "pfSense_vm_desired_capacity_vesxi-u-01" {
+  default = "1"
+}
+
+

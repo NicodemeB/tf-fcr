@@ -1,0 +1,15 @@
+{
+    "vcenter_server": "vcenterserver.rack",
+    "vsphere-datacenter": "Homelab",
+    "username": "packer@vsphere.rack",
+    "password": "password",
+    "datastore": "G7-INIT-DS1",
+    "folder": "MT",
+    "host": "esxi-init.rack",
+    "cluster": "esxi-init.rack",
+    "network": "DPort-VLAN-20",
+    "ssh_username": "ubuntu",
+    "ssh_password": "ubuntu",
+    "iso_url": "[G7-INIT-DS1] ISO/ubuntu-18.04.4-server-amd64.iso",
+    "template_name": "Packer-Ubuntu-18.04-TEMPLATE"
+}

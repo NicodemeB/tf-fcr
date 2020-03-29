@@ -1,0 +1,15 @@
+{
+    "vcenter_server": "vcenterserver.rack",
+    "vsphere-datacenter": "FCR",
+    "username": "packer@vsphere.rack",
+    "password": "n7acD7EzSDfYZxdP#",
+    "datastore": "vESXI-U-01-DS1",
+    "host": "vesxi-u-01.rack",
+    "cluster": "vesxi-u-01.rack",
+    "network": "VM Network - vesxi-u-01",
+    "network-second": "VM Network - vesxi-u-01",
+    "ssh_username": "admin",
+    "ssh_password": "Puissance4",
+    "iso_url": "[vESXI-U-01-DS1] ISO/pfSense-CE-2.4.5-RELEASE-amd64.iso",
+    "template_name": "Packer-pfSense-u-01-TEMPLATE-FCR"
+}

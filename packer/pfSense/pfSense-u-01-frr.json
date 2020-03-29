@@ -1,0 +1,76 @@
+{
+    "builders": [{
+        "type": "vsphere-iso",
+
+        "vcenter_server": "{{user `vcenter_server`}}",
+        "username": "{{user `username`}}",
+        "password": "{{user `password`}}",
+        "insecure_connection": "true",
+
+        "datacenter": "{{user `vsphere-datacenter`}}",
+
+        "vm_name": "{{user `template_name`}}",
+        "datastore": "{{user `datastore`}}",
+        "host": "{{user `host`}}",
+        "convert_to_template": "true",
+        "cluster": "{{user `cluster`}}",
+        "boot_order": "disk,cdrom",
+
+        "guest_os_type": "freebsd64Guest",
+
+        "ssh_username": "{{user `ssh_username`}}",
+        "ssh_password": "{{user `ssh_password`}}",
+
+        "CPUs": 2,
+        "RAM": 2048,
+        "RAM_reserve_all": false,
+
+        "disk_size": 8192,
+        "disk_thin_provisioned": true,
+
+
+        "network_adapters": [
+            {
+                "network_card": "vmxnet3",
+                "network": "{{user `network`}}"
+            },
+            {
+                "network_card": "vmxnet3",
+                "network": "{{user `network-second`}}"
+            }
+        ],
+
+        "iso_paths": ["{{user `iso_url`}}"],
+        "iso_url": "http://cdimage.ubuntu.com/releases/18.04/release/ubuntu-18.04.4-server-amd64.iso",
+        "iso_checksum": "d5bc5c59c24191bb45dd85fc6a420b34",
+        "iso_checksum_type": "md5",
+
+
+        "http_directory": "http",
+        "http_port_min": "8100",
+        "boot_wait": "120s",
+        "boot_command": [
+            "<enter>",
+            "<wait><wait><wait><wait><enter>",
+            "<wait><wait><wait><wait><enter>",
+            "<wait><wait><wait><wait><enter>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>N",
+            "<wait><wait><wait><wait>R",
+            "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>n<enter>",
+            "<wait><wait><wait><wait>vmx0<enter>",
+            "<wait><wait><wait><wait>vmx1<enter>",
+            "<wait><wait><wait><wait>y<enter>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
+            "12<enter>",
+            "<wait5><wait5>playback installpkg Open-VM-Tools<enter>",
+            "<wait10><wait10><wait10><wait10>playback installpkg frr<enter>",
+            "<wait10><wait10><wait10><wait10>exit<enter>",
+            "<wait5><wait5>8<enter><wait><wait>",
+            "cp /conf/config.xml /conf/config.xml.org<wait><wait><enter>",
+            "telnet {{ .HTTPIP }} {{ .HTTPPort }} | sed '1,/^$/d' >/conf/config.xml<wait><wait><enter>",
+            "GET /config-pfSense-u-01.xml HTTP/1.0<enter><enter>",
+            "<wait5><wait5>reboot<enter>"
+        ],
+        "ssh_port": 22
+    }]
+}
