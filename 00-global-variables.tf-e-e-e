@@ -1,10 +1,24 @@
 # Configure the VMware vSphere Provider
 # You can use vcenter login params or simply host esxi login params
+
+variable "vcenter_user" {
+  default = "user"
+}
+
+variable "vcenter_password" {
+  default = "password"
+}
+
+variable "vcenter_vsphere_server" {
+  default = "vsphere_server"
+}
+
+
 provider "vsphere" {
   # If you use a domain set your login like this "MyDomain\\MyUser"
-  user           = "terraform@vsphere.rack"
-  password       = "password"
-  vsphere_server = "vcenterserver.rack"
+  user           = var.vcenter_user
+  password       = var.vcenter_password
+  vsphere_server = var.vcenter_vsphere_server
 
   # if you have a self-signed cert
   allow_unverified_ssl = true
