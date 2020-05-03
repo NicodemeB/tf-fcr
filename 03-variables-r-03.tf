@@ -11,8 +11,8 @@ variable "pfSense_network_params_vesxi-r-03" {
 
 variable "ubuntu_vm_params_vesxi-r-03" {
   default = {
-    vcpu = "1"
-    ram  = "2048"
+    vcpu = "4"
+    ram  = "4096"
     # You can't set a datastore name with interspace
     disk_datastore = "vESXI-R-03-DS1"
     disk_size      = "25"
