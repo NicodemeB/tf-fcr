@@ -1,7 +1,7 @@
 {
   "version": 4,
   "terraform_version": "0.12.21",
-  "serial": 1343,
+  "serial": 1347,
   "lineage": "27e9843b-ebe4-af30-3b6e-ed3ceb2a1f30",
   "outputs": {
     "Ubuntu-r-03-IPs": {
@@ -83,8 +83,19 @@
       ]
     },
     "name": {
-      "value": "password",
-      "type": "string"
+      "value": [
+        "terraform@vsphere.rack",
+        "password",
+        "vcenterserver.rack"
+      ],
+      "type": [
+        "tuple",
+        [
+          "string",
+          "string",
+          "string"
+        ]
+      ]
     }
   },
   "resources": [
