@@ -11,6 +11,6 @@
     "ssh_username": "ubuntu",
     "ssh_password": "ubuntu",
     "iso_url": "[vESXI-U-01-DS1] ISO/ubuntu-18.04.4-server-amd64.iso",
-    "template_name": "Packer-Ubuntu-18.04-TEMPLATE-FCR-2"
+    "template_name": "Packer-Ubuntu-18.04-TEMPLATE-FCR"
 }
 
