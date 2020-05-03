@@ -1,8 +1,8 @@
 {
     "vcenter_server": "vcenterserver.rack",
     "vsphere-datacenter": "FCR",
-    "username": "packer@vsphere.rack",
-    "password": "n7acD7EzSDfYZxdP#",
+    "username": "{{env `PACKER_USERNAME`}}",
+    "password": "{{env `PACKER_PASSWORD`}}",
     "datastore": "vESXI-U-01-DS1",
     "host": "vesxi-u-01.rack",
     "cluster": "vesxi-u-01.rack",
@@ -13,3 +13,4 @@
     "iso_url": "[vESXI-U-01-DS1] ISO/ubuntu-18.04.4-server-amd64.iso",
     "template_name": "Packer-Ubuntu-18.04-TEMPLATE-FCR-2"
 }
+

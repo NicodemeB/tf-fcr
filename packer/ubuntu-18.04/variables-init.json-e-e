@@ -1,8 +1,8 @@
 {
     "vcenter_server": "vcenterserver.rack",
     "vsphere-datacenter": "Homelab",
-    "username": "packer@vsphere.rack",
-    "password": "password#",
+    "username": "{{env `PACKER_USERNAME`}}",
+    "password": "{{env `PACKER_PASSWORD`}}",
     "datastore": "G7-INIT-DS1",
     "folder": "MT",
     "host": "esxi-init.rack",

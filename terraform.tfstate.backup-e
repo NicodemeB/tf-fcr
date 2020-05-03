@@ -1,7 +1,7 @@
 {
   "version": 4,
   "terraform_version": "0.12.21",
-  "serial": 1283,
+  "serial": 1343,
   "lineage": "27e9843b-ebe4-af30-3b6e-ed3ceb2a1f30",
   "outputs": {
     "Ubuntu-r-03-IPs": {
@@ -19,8 +19,8 @@
     },
     "Ubuntu-r-03-Passwords": {
       "value": {
-        "r-03-ubuntu01": "_y5rdFHvL@0zHzUB8Xq_jgPtRAP@J0zW",
-        "r-03-ubuntu02": "_QLri5h8k%OyI65Hfd88wQ9vnCHGrSuH"
+        "r-03-ubuntu01": "s3oQN4nqS5dUIxRzNvdUZ1u0AzTP5ynZ",
+        "r-03-ubuntu02": "ky3EtPdtTPGmblvtKH2xuKx5X2NVAakI"
       },
       "type": [
         "object",
@@ -45,8 +45,8 @@
     },
     "Ubuntu-u-01-Passwords": {
       "value": {
-        "u-01-ubuntu01": "g-n\u003e8R\u003eM$T2a:UGH5WE?S?=Y\u003exvlZB]s",
-        "u-01-ubuntu02": "]KRrlRv2}ejh+@wH=mT*Msm[KQJ*$ZQu"
+        "u-01-ubuntu01": "0f7iD6vYQqsbucy3RBPy5GCMMeCb3ZQa",
+        "u-01-ubuntu02": "tzOb625BfkaT7O36VZ0cRZMvMRudeqhT"
       },
       "type": [
         "object",
@@ -71,8 +71,8 @@
     },
     "Ubuntu-u-02-Passwords": {
       "value": {
-        "u-02-ubuntu01": "BZhOro43Bu2CKoSaYU8i7Xn3Y1D0KNmq",
-        "u-02-ubuntu02": "PtmhR_4l86Xv0Hq3U2tQhVyTCpAWIH0Q"
+        "u-02-ubuntu01": "6EpL81a6yLygcOOrTZ5krbsQWgp4zIi2",
+        "u-02-ubuntu02": "25XMpfubbxGKb9FtHeseJHd62CYP4VpP"
       },
       "type": [
         "object",
@@ -81,6 +81,10 @@
           "u-02-ubuntu02": "string"
         }
       ]
+    },
+    "name": {
+      "value": "password",
+      "type": "string"
     }
   },
   "resources": [
@@ -310,7 +314,7 @@
           "schema_version": 0,
           "attributes": {
             "datacenter_id": "datacenter-435",
-            "id": "network-2010",
+            "id": "network-2020",
             "name": "ubuntu_network_vesxi-r-03",
             "type": "Network"
           }
@@ -327,7 +331,7 @@
           "schema_version": 0,
           "attributes": {
             "datacenter_id": "datacenter-435",
-            "id": "network-2009",
+            "id": "network-2019",
             "name": "ubuntu_network_vesxi-u-01",
             "type": "Network"
           }
@@ -344,7 +348,7 @@
           "schema_version": 0,
           "attributes": {
             "datacenter_id": "datacenter-435",
-            "id": "network-2008",
+            "id": "network-2018",
             "name": "ubuntu_network_vesxi-u-02",
             "type": "Network"
           }
@@ -503,9 +507,9 @@
             "min_special": 0,
             "min_upper": 0,
             "number": true,
-            "override_special": "_%@",
-            "result": "_y5rdFHvL@0zHzUB8Xq_jgPtRAP@J0zW",
-            "special": true,
+            "override_special": null,
+            "result": "s3oQN4nqS5dUIxRzNvdUZ1u0AzTP5ynZ",
+            "special": false,
             "upper": true
           },
           "private": "bnVsbA=="
@@ -523,9 +527,9 @@
             "min_special": 0,
             "min_upper": 0,
             "number": true,
-            "override_special": "_%@",
-            "result": "_QLri5h8k%OyI65Hfd88wQ9vnCHGrSuH",
-            "special": true,
+            "override_special": null,
+            "result": "ky3EtPdtTPGmblvtKH2xuKx5X2NVAakI",
+            "special": false,
             "upper": true
           },
           "private": "bnVsbA=="
@@ -552,9 +556,9 @@
             "min_special": 0,
             "min_upper": 0,
             "number": true,
-            "override_special": "",
-            "result": "g-n\u003e8R\u003eM$T2a:UGH5WE?S?=Y\u003exvlZB]s",
-            "special": true,
+            "override_special": null,
+            "result": "0f7iD6vYQqsbucy3RBPy5GCMMeCb3ZQa",
+            "special": false,
             "upper": true
           },
           "private": "bnVsbA=="
@@ -572,9 +576,9 @@
             "min_special": 0,
             "min_upper": 0,
             "number": true,
-            "override_special": "",
-            "result": "]KRrlRv2}ejh+@wH=mT*Msm[KQJ*$ZQu",
-            "special": true,
+            "override_special": null,
+            "result": "tzOb625BfkaT7O36VZ0cRZMvMRudeqhT",
+            "special": false,
             "upper": true
           },
           "private": "bnVsbA=="
@@ -601,9 +605,9 @@
             "min_special": 0,
             "min_upper": 0,
             "number": true,
-            "override_special": "_%@",
-            "result": "BZhOro43Bu2CKoSaYU8i7Xn3Y1D0KNmq",
-            "special": true,
+            "override_special": null,
+            "result": "6EpL81a6yLygcOOrTZ5krbsQWgp4zIi2",
+            "special": false,
             "upper": true
           },
           "private": "bnVsbA=="
@@ -621,9 +625,9 @@
             "min_special": 0,
             "min_upper": 0,
             "number": true,
-            "override_special": "_%@",
-            "result": "PtmhR_4l86Xv0Hq3U2tQhVyTCpAWIH0Q",
-            "special": true,
+            "override_special": null,
+            "result": "25XMpfubbxGKb9FtHeseJHd62CYP4VpP",
+            "special": false,
             "upper": true
           },
           "private": "bnVsbA=="
@@ -792,13 +796,13 @@
             "boot_retry_delay": 10000,
             "boot_retry_enabled": false,
             "cdrom": [],
-            "change_version": "2020-05-03T14:25:14.666948Z",
+            "change_version": "2020-05-03T14:36:30.650708Z",
             "clone": [
               {
                 "customize": [
                   {
-                    "dns_server_list": null,
-                    "dns_suffix_list": null,
+                    "dns_server_list": [],
+                    "dns_suffix_list": [],
                     "ipv4_gateway": "172.12.0.254",
                     "ipv6_gateway": "",
                     "linux_options": [
@@ -839,7 +843,7 @@
             "cpu_reservation": 0,
             "cpu_share_count": 1000,
             "cpu_share_level": "normal",
-            "custom_attributes": null,
+            "custom_attributes": {},
             "datastore_cluster_id": null,
             "datastore_id": "datastore-529",
             "default_ip_address": "172.12.0.10",
@@ -872,18 +876,17 @@
             "enable_disk_uuid": false,
             "enable_logging": false,
             "ept_rvi_mode": "automatic",
-            "extra_config": null,
+            "extra_config": {},
             "firmware": "bios",
             "folder": "",
             "force_power_off": true,
             "guest_id": "ubuntu64Guest",
             "guest_ip_addresses": [
-              "172.12.0.10",
-              "fe80::250:56ff:fe9e:3a4d"
+              "172.12.0.10"
             ],
             "host_system_id": "host-528",
             "hv_mode": "hvAuto",
-            "id": "421ecafe-9fb8-77e6-8cb0-f36a2a9a018e",
+            "id": "421eec5b-8218-6894-f430-a4e2c5d55d51",
             "ignored_guest_ips": null,
             "imported": null,
             "latency_sensitivity": "normal",
@@ -894,7 +897,7 @@
             "memory_share_count": 20480,
             "memory_share_level": "normal",
             "migrate_wait_timeout": 30,
-            "moid": "vm-2015",
+            "moid": "vm-2022",
             "name": "r-03-ubuntu01",
             "nested_hv_enabled": false,
             "network_interface": [
@@ -906,8 +909,8 @@
                 "bandwidth_share_level": "normal",
                 "device_address": "pci:0:7",
                 "key": 4000,
-                "mac_address": "00:50:56:9e:3a:4d",
-                "network_id": "network-2010",
+                "mac_address": "00:50:56:9e:18:c0",
+                "network_id": "network-2020",
                 "use_static_mac": false
               }
             ],
@@ -927,8 +930,8 @@
             "storage_policy_id": "",
             "swap_placement_policy": "inherit",
             "sync_time_with_host": false,
-            "tags": null,
-            "uuid": "421ecafe-9fb8-77e6-8cb0-f36a2a9a018e",
+            "tags": [],
+            "uuid": "421eec5b-8218-6894-f430-a4e2c5d55d51",
             "vapp": [],
             "vapp_transport": [],
             "vmware_tools_status": "guestToolsRunning",
@@ -953,13 +956,13 @@
             "boot_retry_delay": 10000,
             "boot_retry_enabled": false,
             "cdrom": [],
-            "change_version": "2020-05-03T14:25:14.64465Z",
+            "change_version": "2020-05-03T14:36:30.665408Z",
             "clone": [
               {
                 "customize": [
                   {
-                    "dns_server_list": null,
-                    "dns_suffix_list": null,
+                    "dns_server_list": [],
+                    "dns_suffix_list": [],
                     "ipv4_gateway": "172.12.0.254",
                     "ipv6_gateway": "",
                     "linux_options": [
@@ -1000,7 +1003,7 @@
             "cpu_reservation": 0,
             "cpu_share_count": 1000,
             "cpu_share_level": "normal",
-            "custom_attributes": null,
+            "custom_attributes": {},
             "datastore_cluster_id": null,
             "datastore_id": "datastore-529",
             "default_ip_address": "172.12.0.11",
@@ -1033,18 +1036,17 @@
             "enable_disk_uuid": false,
             "enable_logging": false,
             "ept_rvi_mode": "automatic",
-            "extra_config": null,
+            "extra_config": {},
             "firmware": "bios",
             "folder": "",
             "force_power_off": true,
             "guest_id": "ubuntu64Guest",
             "guest_ip_addresses": [
-              "172.12.0.11",
-              "fe80::250:56ff:fe9e:af8"
+              "172.12.0.11"
             ],
             "host_system_id": "host-528",
             "hv_mode": "hvAuto",
-            "id": "421e4ae3-acea-22f3-6e99-aa67f9d6b591",
+            "id": "421ea5cd-749b-1828-8dd2-b9fe91ee5449",
             "ignored_guest_ips": null,
             "imported": null,
             "latency_sensitivity": "normal",
@@ -1055,7 +1057,7 @@
             "memory_share_count": 20480,
             "memory_share_level": "normal",
             "migrate_wait_timeout": 30,
-            "moid": "vm-2011",
+            "moid": "vm-2021",
             "name": "r-03-ubuntu02",
             "nested_hv_enabled": false,
             "network_interface": [
@@ -1067,8 +1069,8 @@
                 "bandwidth_share_level": "normal",
                 "device_address": "pci:0:7",
                 "key": 4000,
-                "mac_address": "00:50:56:9e:0a:f8",
-                "network_id": "network-2010",
+                "mac_address": "00:50:56:9e:c3:7d",
+                "network_id": "network-2020",
                 "use_static_mac": false
               }
             ],
@@ -1088,8 +1090,8 @@
             "storage_policy_id": "",
             "swap_placement_policy": "inherit",
             "sync_time_with_host": false,
-            "tags": null,
-            "uuid": "421e4ae3-acea-22f3-6e99-aa67f9d6b591",
+            "tags": [],
+            "uuid": "421ea5cd-749b-1828-8dd2-b9fe91ee5449",
             "vapp": [],
             "vapp_transport": [],
             "vmware_tools_status": "guestToolsRunning",
@@ -1123,13 +1125,13 @@
             "boot_retry_delay": 10000,
             "boot_retry_enabled": false,
             "cdrom": [],
-            "change_version": "2020-05-03T14:23:48.567705Z",
+            "change_version": "2020-05-03T14:35:23.666016Z",
             "clone": [
               {
                 "customize": [
                   {
-                    "dns_server_list": null,
-                    "dns_suffix_list": null,
+                    "dns_server_list": [],
+                    "dns_suffix_list": [],
                     "ipv4_gateway": "172.10.0.254",
                     "ipv6_gateway": "",
                     "linux_options": [
@@ -1170,7 +1172,7 @@
             "cpu_reservation": 0,
             "cpu_share_count": 1000,
             "cpu_share_level": "normal",
-            "custom_attributes": null,
+            "custom_attributes": {},
             "datastore_cluster_id": null,
             "datastore_id": "datastore-635",
             "default_ip_address": "172.10.0.10",
@@ -1195,7 +1197,7 @@
                 "storage_policy_id": "",
                 "thin_provisioned": true,
                 "unit_number": 0,
-                "uuid": "6000C298-b5bf-3f07-ff95-d1164866761b",
+                "uuid": "6000C293-9ee4-adc7-f9ce-140c60246f12",
                 "write_through": false
               }
             ],
@@ -1203,18 +1205,17 @@
             "enable_disk_uuid": false,
             "enable_logging": false,
             "ept_rvi_mode": "automatic",
-            "extra_config": null,
+            "extra_config": {},
             "firmware": "bios",
             "folder": "",
             "force_power_off": true,
             "guest_id": "ubuntu64Guest",
             "guest_ip_addresses": [
-              "172.10.0.10",
-              "fe80::250:56ff:fe9e:5a40"
+              "172.10.0.10"
             ],
             "host_system_id": "host-442",
             "hv_mode": "hvAuto",
-            "id": "421eaddf-c72b-dbd0-b018-09e6b577bd57",
+            "id": "421e6741-79d4-6230-2fa3-492bf5f26b38",
             "ignored_guest_ips": null,
             "imported": null,
             "latency_sensitivity": "normal",
@@ -1225,7 +1226,7 @@
             "memory_share_count": 20480,
             "memory_share_level": "normal",
             "migrate_wait_timeout": 30,
-            "moid": "vm-2016",
+            "moid": "vm-2023",
             "name": "u-01-ubuntu01",
             "nested_hv_enabled": false,
             "network_interface": [
@@ -1237,8 +1238,8 @@
                 "bandwidth_share_level": "normal",
                 "device_address": "pci:0:7",
                 "key": 4000,
-                "mac_address": "00:50:56:9e:5a:40",
-                "network_id": "network-2009",
+                "mac_address": "00:50:56:9e:a3:01",
+                "network_id": "network-2019",
                 "use_static_mac": false
               }
             ],
@@ -1258,8 +1259,8 @@
             "storage_policy_id": "",
             "swap_placement_policy": "inherit",
             "sync_time_with_host": false,
-            "tags": null,
-            "uuid": "421eaddf-c72b-dbd0-b018-09e6b577bd57",
+            "tags": [],
+            "uuid": "421e6741-79d4-6230-2fa3-492bf5f26b38",
             "vapp": [],
             "vapp_transport": [],
             "vmware_tools_status": "guestToolsRunning",
@@ -1284,13 +1285,13 @@
             "boot_retry_delay": 10000,
             "boot_retry_enabled": false,
             "cdrom": [],
-            "change_version": "2020-05-03T14:23:42.646434Z",
+            "change_version": "2020-05-03T14:35:22.588203Z",
             "clone": [
               {
                 "customize": [
                   {
-                    "dns_server_list": null,
-                    "dns_suffix_list": null,
+                    "dns_server_list": [],
+                    "dns_suffix_list": [],
                     "ipv4_gateway": "172.10.0.254",
                     "ipv6_gateway": "",
                     "linux_options": [
@@ -1331,7 +1332,7 @@
             "cpu_reservation": 0,
             "cpu_share_count": 1000,
             "cpu_share_level": "normal",
-            "custom_attributes": null,
+            "custom_attributes": {},
             "datastore_cluster_id": null,
             "datastore_id": "datastore-635",
             "default_ip_address": "172.10.0.11",
@@ -1356,7 +1357,7 @@
                 "storage_policy_id": "",
                 "thin_provisioned": true,
                 "unit_number": 0,
-                "uuid": "6000C293-d896-f846-ec2a-2145a8d834b4",
+                "uuid": "6000C29d-01a8-b365-0593-eb6a572003a5",
                 "write_through": false
               }
             ],
@@ -1364,18 +1365,17 @@
             "enable_disk_uuid": false,
             "enable_logging": false,
             "ept_rvi_mode": "automatic",
-            "extra_config": null,
+            "extra_config": {},
             "firmware": "bios",
             "folder": "",
             "force_power_off": true,
             "guest_id": "ubuntu64Guest",
             "guest_ip_addresses": [
-              "172.10.0.11",
-              "fe80::250:56ff:fe9e:6805"
+              "172.10.0.11"
             ],
             "host_system_id": "host-442",
             "hv_mode": "hvAuto",
-            "id": "421e2f7e-b98d-fa6e-1f3f-6a25c4828e23",
+            "id": "421e6c52-9891-bfc2-99be-e3691d95de56",
             "ignored_guest_ips": null,
             "imported": null,
             "latency_sensitivity": "normal",
@@ -1386,7 +1386,7 @@
             "memory_share_count": 20480,
             "memory_share_level": "normal",
             "migrate_wait_timeout": 30,
-            "moid": "vm-2014",
+            "moid": "vm-2024",
             "name": "u-01-ubuntu02",
             "nested_hv_enabled": false,
             "network_interface": [
@@ -1398,8 +1398,8 @@
                 "bandwidth_share_level": "normal",
                 "device_address": "pci:0:7",
                 "key": 4000,
-                "mac_address": "00:50:56:9e:68:05",
-                "network_id": "network-2009",
+                "mac_address": "00:50:56:9e:78:a8",
+                "network_id": "network-2019",
                 "use_static_mac": false
               }
             ],
@@ -1419,8 +1419,8 @@
             "storage_policy_id": "",
             "swap_placement_policy": "inherit",
             "sync_time_with_host": false,
-            "tags": null,
-            "uuid": "421e2f7e-b98d-fa6e-1f3f-6a25c4828e23",
+            "tags": [],
+            "uuid": "421e6c52-9891-bfc2-99be-e3691d95de56",
             "vapp": [],
             "vapp_transport": [],
             "vmware_tools_status": "guestToolsRunning",
@@ -1454,13 +1454,13 @@
             "boot_retry_delay": 10000,
             "boot_retry_enabled": false,
             "cdrom": [],
-            "change_version": "2020-05-03T14:22:48.652337Z",
+            "change_version": "2020-05-03T14:34:22.590842Z",
             "clone": [
               {
                 "customize": [
                   {
-                    "dns_server_list": null,
-                    "dns_suffix_list": null,
+                    "dns_server_list": [],
+                    "dns_suffix_list": [],
                     "ipv4_gateway": "172.11.0.254",
                     "ipv6_gateway": "",
                     "linux_options": [
@@ -1501,7 +1501,7 @@
             "cpu_reservation": 0,
             "cpu_share_count": 1000,
             "cpu_share_level": "normal",
-            "custom_attributes": null,
+            "custom_attributes": {},
             "datastore_cluster_id": null,
             "datastore_id": "datastore-636",
             "default_ip_address": "172.11.0.10",
@@ -1534,18 +1534,17 @@
             "enable_disk_uuid": false,
             "enable_logging": false,
             "ept_rvi_mode": "automatic",
-            "extra_config": null,
+            "extra_config": {},
             "firmware": "bios",
             "folder": "",
             "force_power_off": true,
             "guest_id": "ubuntu64Guest",
             "guest_ip_addresses": [
-              "172.11.0.10",
-              "fe80::250:56ff:fe9e:b998"
+              "172.11.0.10"
             ],
             "host_system_id": "host-447",
             "hv_mode": "hvAuto",
-            "id": "421e2577-cdb7-069d-aa14-250f57d612de",
+            "id": "421efa05-f86b-787f-4496-76a7672b38f1",
             "ignored_guest_ips": null,
             "imported": null,
             "latency_sensitivity": "normal",
@@ -1556,7 +1555,7 @@
             "memory_share_count": 20480,
             "memory_share_level": "normal",
             "migrate_wait_timeout": 30,
-            "moid": "vm-2012",
+            "moid": "vm-2025",
             "name": "u-02-ubuntu01",
             "nested_hv_enabled": false,
             "network_interface": [
@@ -1568,8 +1567,8 @@
                 "bandwidth_share_level": "normal",
                 "device_address": "pci:0:7",
                 "key": 4000,
-                "mac_address": "00:50:56:9e:b9:98",
-                "network_id": "network-2008",
+                "mac_address": "00:50:56:9e:eb:f2",
+                "network_id": "network-2018",
                 "use_static_mac": false
               }
             ],
@@ -1589,8 +1588,8 @@
             "storage_policy_id": "",
             "swap_placement_policy": "inherit",
             "sync_time_with_host": false,
-            "tags": null,
-            "uuid": "421e2577-cdb7-069d-aa14-250f57d612de",
+            "tags": [],
+            "uuid": "421efa05-f86b-787f-4496-76a7672b38f1",
             "vapp": [],
             "vapp_transport": [],
             "vmware_tools_status": "guestToolsRunning",
@@ -1615,13 +1614,13 @@
             "boot_retry_delay": 10000,
             "boot_retry_enabled": false,
             "cdrom": [],
-            "change_version": "2020-05-03T14:22:48.589387Z",
+            "change_version": "2020-05-03T14:34:26.622048Z",
             "clone": [
               {
                 "customize": [
                   {
-                    "dns_server_list": null,
-                    "dns_suffix_list": null,
+                    "dns_server_list": [],
+                    "dns_suffix_list": [],
                     "ipv4_gateway": "172.11.0.254",
                     "ipv6_gateway": "",
                     "linux_options": [
@@ -1662,7 +1661,7 @@
             "cpu_reservation": 0,
             "cpu_share_count": 1000,
             "cpu_share_level": "normal",
-            "custom_attributes": null,
+            "custom_attributes": {},
             "datastore_cluster_id": null,
             "datastore_id": "datastore-636",
             "default_ip_address": "172.11.0.11",
@@ -1695,18 +1694,17 @@
             "enable_disk_uuid": false,
             "enable_logging": false,
             "ept_rvi_mode": "automatic",
-            "extra_config": null,
+            "extra_config": {},
             "firmware": "bios",
             "folder": "",
             "force_power_off": true,
             "guest_id": "ubuntu64Guest",
             "guest_ip_addresses": [
-              "172.11.0.11",
-              "fe80::250:56ff:fe9e:ecec"
+              "172.11.0.11"
             ],
             "host_system_id": "host-447",
             "hv_mode": "hvAuto",
-            "id": "421e904a-cd92-0bfa-75d8-aff6749066ea",
+            "id": "421e77d6-d190-868c-a944-8f1a77471fdb",
             "ignored_guest_ips": null,
             "imported": null,
             "latency_sensitivity": "normal",
@@ -1717,7 +1715,7 @@
             "memory_share_count": 20480,
             "memory_share_level": "normal",
             "migrate_wait_timeout": 30,
-            "moid": "vm-2013",
+            "moid": "vm-2026",
             "name": "u-02-ubuntu02",
             "nested_hv_enabled": false,
             "network_interface": [
@@ -1729,8 +1727,8 @@
                 "bandwidth_share_level": "normal",
                 "device_address": "pci:0:7",
                 "key": 4000,
-                "mac_address": "00:50:56:9e:ec:ec",
-                "network_id": "network-2008",
+                "mac_address": "00:50:56:9e:9d:64",
+                "network_id": "network-2018",
                 "use_static_mac": false
               }
             ],
@@ -1750,8 +1748,8 @@
             "storage_policy_id": "",
             "swap_placement_policy": "inherit",
             "sync_time_with_host": false,
-            "tags": null,
-            "uuid": "421e904a-cd92-0bfa-75d8-aff6749066ea",
+            "tags": [],
+            "uuid": "421e77d6-d190-868c-a944-8f1a77471fdb",
             "vapp": [],
             "vapp_transport": [],
             "vmware_tools_status": "guestToolsRunning",

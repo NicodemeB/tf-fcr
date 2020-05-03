@@ -10,7 +10,7 @@ variable "vcenter_password" {
 }
 
 variable "vcenter_vsphere_server" {
-  default = "vsphere_server"
+  default = "vcenterserver.rack"
 }
 
 
