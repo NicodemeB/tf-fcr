@@ -37,6 +37,6 @@ variable "ubuntu_base_hostname_vesxi-u-02" {
 }
 
 variable "ubuntu_vm_desired_capacity_vesxi-u-02" {
-  default = "5"
+  default = "2"
 }
 

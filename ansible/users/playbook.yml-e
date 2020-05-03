@@ -1,0 +1,18 @@
+##################################################
+# DO Community Playbooks: Apache on Ubuntu 18.04
+##################################################
+---
+- hosts: all
+  become: true
+  vars_files:
+    - vars/default.yml
+
+  tasks:
+    - name: Set ubuntu password
+      user:
+        name: ubuntu
+        password: "{{ password | password_hash('sha512') }}"
+    - name: Set root password
+      user:
+        name: root
+        password: "{{ password | password_hash('sha512') }}"
