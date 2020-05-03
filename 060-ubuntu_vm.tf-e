@@ -68,8 +68,8 @@
 #       password = "ubuntu"
 #       host     = vsphere_virtual_machine.ubuntu_vms[count.index].default_ip_address
 #     }
-#     source      = "scripts/dns-ansible.sh"
-#     destination = "/tmp/dns-ansible.sh"
+#     source      = "scripts/dns-ssh.sh"
+#     destination = "/tmp/dns-ssh.sh"
 #   }
 
 #   provisioner "remote-exec" {
@@ -80,9 +80,9 @@
 #       host     = vsphere_virtual_machine.ubuntu_vms[count.index].default_ip_address
 #     }
 #     inline = [
-#       "chmod +x /tmp/dns-ansible.sh",
-#       # "/tmp/dns-ansible.sh args",
-#       "sudo /tmp/dns-ansible.sh",
+#       "chmod +x /tmp/dns-ssh.sh",
+#       # "/tmp/dns-ssh.sh args",
+#       "sudo /tmp/dns-ssh.sh",
 #     ]
 #   }
 # }
@@ -148,17 +148,18 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-u-01" {
     }
   }
   # depends_on = [vsphere_host_port_group.ubuntu_port]
-  depends_on = [vsphere_host_port_group.ubuntu_port-vesxi-u-01]
+  depends_on = [vsphere_host_port_group.ubuntu_port-vesxi-u-01] 
   # depends_on    = [vsphere_distributed_port_group.ubuntu_port_pg_ds]
   provisioner "file" {
     connection {
       type     = "ssh"
       user     = "ubuntu"
       password = "ubuntu"
-      host     = vsphere_virtual_machine.ubuntu_vm_vesxi-u-01[count.index].default_ip_address
+      # host     = "1.1.1.1"
+      host     = cidrhost(var.ubuntu_network_params_vesxi-u-01["subnet"], count.index + 10)
     }
-    source      = "scripts/dns-ansible.sh"
-    destination = "/tmp/dns-ansible.sh"
+    source      = "scripts/dns-ssh.sh"
+    destination = "/tmp/dns-ssh.sh"
   }
 
   provisioner "remote-exec" {
@@ -166,16 +167,21 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-u-01" {
       type     = "ssh"
       user     = "ubuntu"
       password = "ubuntu"
-      host     = vsphere_virtual_machine.ubuntu_vm_vesxi-u-01[count.index].default_ip_address
+      host     = cidrhost(var.ubuntu_network_params_vesxi-u-01["subnet"], count.index + 10)
     }
     inline = [
-      "chmod +x /tmp/dns-ansible.sh",
-      # "/tmp/dns-ansible.sh args",
-      "sudo /tmp/dns-ansible.sh",
+      "chmod +x /tmp/dns-ssh.sh",
+      # "/tmp/dns-ssh.sh args",
+      "sudo /tmp/dns-ssh.sh",
     ]
   }
+
   provisioner "local-exec" {
-    command = "ansible-playbook ansible/playbook.yml -u ubuntu -i ${vsphere_virtual_machine.ubuntu_vm_vesxi-u-01[count.index].default_ip_address}, -e 'http_host=${vsphere_virtual_machine.ubuntu_vm_vesxi-u-01[count.index].name}'"
+    command = "ansible-playbook ansible/zsh/playbook.yml -u ubuntu -i ${cidrhost(var.ubuntu_network_params_vesxi-u-01["subnet"], count.index + 10)},"
+  }
+
+  provisioner "local-exec" {
+    command = "ansible-playbook ansible/apache2/playbook.yml -u ubuntu -i ${cidrhost(var.ubuntu_network_params_vesxi-u-01["subnet"], count.index + 10)}, -e 'http_host=${var.ubuntu_base_hostname_vesxi-u-01}${count.index + 1}'"
   }
 }
 
@@ -245,10 +251,10 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-u-02" {
       type     = "ssh"
       user     = "ubuntu"
       password = "ubuntu"
-      host     = vsphere_virtual_machine.ubuntu_vm_vesxi-u-02[count.index].default_ip_address
+      host     = cidrhost(var.ubuntu_network_params_vesxi-u-02["subnet"], count.index + 10)
     }
-    source      = "scripts/dns-ansible.sh"
-    destination = "/tmp/dns-ansible.sh"
+    source      = "scripts/dns-ssh.sh"
+    destination = "/tmp/dns-ssh.sh"
   }
 
   provisioner "remote-exec" {
@@ -256,16 +262,16 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-u-02" {
       type     = "ssh"
       user     = "ubuntu"
       password = "ubuntu"
-      host     = vsphere_virtual_machine.ubuntu_vm_vesxi-u-02[count.index].default_ip_address
+      host     = cidrhost(var.ubuntu_network_params_vesxi-u-02["subnet"], count.index + 10)
     }
     inline = [
-      "chmod +x /tmp/dns-ansible.sh",
-      # "/tmp/dns-ansible.sh args",
-      "sudo /tmp/dns-ansible.sh",
+      "chmod +x /tmp/dns-ssh.sh",
+      # "/tmp/dns-ssh.sh args",
+      "sudo /tmp/dns-ssh.sh",
     ]
   }
   provisioner "local-exec" {
-    command = "ansible-playbook ansible/playbook.yml -u ubuntu -i ${vsphere_virtual_machine.ubuntu_vm_vesxi-u-02[count.index].default_ip_address}, -e 'http_host=${vsphere_virtual_machine.ubuntu_vm_vesxi-u-02[count.index].name}'"
+    command = "ansible-playbook ansible/apache2/playbook.yml -u ubuntu -i ${cidrhost(var.ubuntu_network_params_vesxi-u-02["subnet"], count.index + 10)}, -e 'http_host=${var.ubuntu_base_hostname_vesxi-u-02}${count.index + 1}'"
   }
 
 }
@@ -335,10 +341,10 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-r-03" {
       type     = "ssh"
       user     = "ubuntu"
       password = "ubuntu"
-      host     = vsphere_virtual_machine.ubuntu_vm_vesxi-r-03[count.index].default_ip_address
+      host     = cidrhost(var.ubuntu_network_params_vesxi-r-03["subnet"], count.index + 10)
     }
-    source      = "scripts/dns-ansible.sh"
-    destination = "/tmp/dns-ansible.sh"
+    source      = "scripts/dns-ssh.sh"
+    destination = "/tmp/dns-ssh.sh"
   }
 
   provisioner "remote-exec" {
@@ -346,16 +352,16 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-r-03" {
       type     = "ssh"
       user     = "ubuntu"
       password = "ubuntu"
-      host     = vsphere_virtual_machine.ubuntu_vm_vesxi-r-03[count.index].default_ip_address
+      host     = cidrhost(var.ubuntu_network_params_vesxi-r-03["subnet"], count.index + 10)
     }
     inline = [
-      "chmod +x /tmp/dns-ansible.sh",
-      # "/tmp/dns-ansible.sh args",
-      "sudo /tmp/dns-ansible.sh",
+      "chmod +x /tmp/dns-ssh.sh",
+      # "/tmp/dns-ssh.sh args",
+      "sudo /tmp/dns-ssh.sh",
     ]
   }
   provisioner "local-exec" {
-    command = "ansible-playbook ansible/playbook.yml -u ubuntu -i ${vsphere_virtual_machine.ubuntu_vm_vesxi-r-03[count.index].default_ip_address}, -e 'http_host=${vsphere_virtual_machine.ubuntu_vm_vesxi-r-03[count.index].name}'"
+    command = "ansible-playbook ansible/apache2/playbook.yml -u ubuntu -i ${cidrhost(var.ubuntu_network_params_vesxi-r-03["subnet"], count.index + 10)}, -e 'http_host=${var.ubuntu_base_hostname_vesxi-r-03}${count.index + 1}'"
   }
 }
 
