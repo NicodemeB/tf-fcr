@@ -102,7 +102,7 @@ data "vsphere_network" "ubuntu-vesxi-r-03" {
   depends_on    = [vsphere_host_port_group.ubuntu_port-vesxi-r-03]
 }
 
-# pfSense vSxitches
+# pfSense vSwitches
 data "vsphere_network" "pfSense-vesxi-u-01-out" {
   name          = join("", [var.pfSense_network_params_vesxi-u-01["label"], "-out"])
   datacenter_id = data.vsphere_datacenter.dc.id
