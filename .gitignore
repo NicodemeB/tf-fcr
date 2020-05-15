@@ -7,3 +7,8 @@ On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
+[master 2b95aa0] .terraform/
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+ delete mode 100755 .terraform/plugins/darwin_amd64/lock.json
+ delete mode 100755 .terraform/plugins/darwin_amd64/terraform-provider-random_v2.2.1_x4
+ delete mode 100755 .terraform/plugins/darwin_amd64/terraform-provider-vsphere_v1.16.2_x4
