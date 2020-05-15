@@ -3,3 +3,6 @@ secrets.tfvars
 */.DS_Store
 */*.DS_Store
 *.DS_Store
+[master 584b260] .terraform/*
+ 1 file changed, 5 insertions(+), 14 deletions(-)
+ rewrite .gitignore (87%)
