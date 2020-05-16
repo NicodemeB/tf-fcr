@@ -62,6 +62,10 @@ variable "ubuntu_vm_desired_capacity_vesxi-r-03" {
 terraform destroy
 ```
 
+### Demo
+
+TODO
+
 ## Packer 
 
 Environment variables are used to allow Packer to connect to the vCenter,
@@ -72,6 +76,10 @@ PACKER_PASSWORD=Pa$$w0rd2.0
 ```
 
 Packer builds are defined in the [packer](./packer) directory.
+
+### Demo
+
+TODO
 
 ## Ansible 
 
