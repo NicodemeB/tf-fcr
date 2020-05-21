@@ -28,7 +28,7 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-u-01" {
   resource_pool_id = data.vsphere_resource_pool.vesxi-u-01.id
   guest_id         = data.vsphere_virtual_machine.template_ubuntu_18_04.guest_id
   scsi_type        = data.vsphere_virtual_machine.template_ubuntu_18_04.scsi_type
-  annotation       = "ubuntu:ubuntu"
+  annotation       = "ubuntu:${random_password.password-u-01[count.index].result}"
 
   network_interface {
     network_id = data.vsphere_network.ubuntu-vesxi-u-01.id
@@ -125,7 +125,7 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-u-02" {
   resource_pool_id = data.vsphere_resource_pool.vesxi-u-02.id
   guest_id         = data.vsphere_virtual_machine.template_ubuntu_18_04.guest_id
   scsi_type        = data.vsphere_virtual_machine.template_ubuntu_18_04.scsi_type
-  annotation       = "ubuntu:ubuntu"
+  annotation       = "ubuntu:${random_password.password-u-02[count.index].result}"
 
 
   # Configure network interface
@@ -230,7 +230,7 @@ resource "vsphere_virtual_machine" "ubuntu_vm_vesxi-r-03" {
   resource_pool_id = data.vsphere_resource_pool.vesxi-r-03.id
   guest_id         = data.vsphere_virtual_machine.template_ubuntu_18_04.guest_id
   scsi_type        = data.vsphere_virtual_machine.template_ubuntu_18_04.scsi_type
-  annotation       = "ubuntu:ubuntu"
+  annotation       = "ubuntu:${random_password.password-r-03[count.index].result}"
 
 
   # Configure network interface

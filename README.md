@@ -56,15 +56,15 @@ variable "ubuntu_vm_desired_capacity_vesxi-r-03" {
 }
 ```
 
+### Demo
+
+![](./demo/tf-appply-fcr.gif)
+
 ### Delete stack
 
 ```bash
 terraform destroy
 ```
-
-### Demo
-
-TODO
 
 ## Packer 
 
@@ -79,7 +79,7 @@ Packer builds are defined in the [packer](./packer) directory.
 
 ### Demo
 
-TODO
+![](./demo/packer-ubuntu.gif)
 
 ## Ansible 
 
