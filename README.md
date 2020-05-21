@@ -79,7 +79,7 @@ Packer builds are defined in the [packer](./packer) directory.
 
 ### Demo
 
-![](./demo/packer-ubuntu.gif)
+![](./demo/Packer-ubuntu.gif)
 
 ## Ansible 
 
