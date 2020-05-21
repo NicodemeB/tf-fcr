@@ -58,7 +58,7 @@ variable "ubuntu_vm_desired_capacity_vesxi-r-03" {
 
 ### Demo
 
-![](./demo/tf-appply-fcr.gif)
+![](./demo/tf-apply-fcr.gif)
 
 ### Delete stack
 
